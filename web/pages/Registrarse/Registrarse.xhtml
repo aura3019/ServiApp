@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:jsf="http://xmlns.jcp.org/jsf"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+
+        <ui:composition template="./../../WEB-INF/Template.xhtml">
+            <ui:define name="title">Registrarse</ui:define>
+            <ui:define name="header">
+                serviapp
+            </ui:define>
+
+            <ui:define name="body">
+                <form jsf:id="createCoffeappForm">
+            REGITRARSE
+            <table border="10px">
+                <tr>
+                    <td>Nombre</td>
+                    <td>
+            <input type="text"
+                   jsf:id="nombre"
+                   required="true"/>
+            </td>
+            </tr>
+                <tr>
+                    <td>Apellido</td>
+                    <td>
+            <input type="text"
+                   jsf:id="apellido"
+                   required="true"/>
+            </td>
+            </tr>
+                <tr>
+                    <td>Telefono</td>
+                    <td>
+            <input type="number"
+                   jsf:id="telefono"
+                   required="true"/>
+            </td>
+            </tr>
+                <tr>
+                    <td>Direccion</td>
+                    <td>
+                        <input type="text"
+                               jsf:id="direccion"
+                               required="true"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td>
+                        <input type="text"
+                               jsf:id="password"
+                               required="true"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Roles</td>
+                    <td>
+                        <select jsf:id="Roles"
+                                size="1"
+                                required="true">
+                            <f:selectItem itemLabel=""/>
+                            <f:selectItem itemLabel="Usuario" itemValue="U"/>
+                            <f:selectItem itemLabel="Administrador" itemValue="A"/>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ciudad</td>
+                    <td>
+                <input type="text"
+                       jsf:id="ciudad"
+                       required="true"/>
+                    </td>
+                </tr>
+                 <tr>
+                    <td>Tipo de documento</td>
+                    <td>
+                        <select jsf:id="Tipo_de_documento"
+                                size="1"
+                                required="true">
+                            <f:selectItem itemLabel=""/>
+                            <f:selectItem itemLabel="Cedula Ciudadania" itemValue="C.C."/>
+                            <f:selectItem itemLabel="Persona juridica" itemValue="NIT"/>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    <button type="ENVIAR"
+                            jsf:action="List"
+                            >
+                        ENVIAR
+                    </button>
+                    </td>
+                </tr>
+            </table>       
+        </form>
+            </ui:define>
+
+            <ui:define name="bottom">
+                bottom
+            </ui:define>
+
+        </ui:composition>
+</html>

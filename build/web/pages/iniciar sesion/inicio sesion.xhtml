@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+    <body>
+
+        <ui:composition template="./../../WEB-INF/Template.xhtml">
+
+            <ui:define name="top">
+                top
+            </ui:define>
+
+            <ui:define name="content">
+                <form jsf:id="createServiappform">
+                    INICIAR SESSION
+                    <table border="2em" >
+                        <tr>
+                            <td>Usuario</td>
+                            <td>
+                            <input type="text"
+                                   jsf:id="usuario"
+                                   required="true"/>
+                            </td>
+                        </tr>
+                           <tr>
+                            <td>Password</td>
+                            <td>
+                            <input type="text"
+                                   jsf:id="password"
+                                   required="true"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                        <button type="inicar"
+                                jsf:action="List">
+                     INICIAR
+                        </button>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                </form>
+            </ui:define>
+
+            <ui:define name="bottom">
+                iniciar sesion
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>
