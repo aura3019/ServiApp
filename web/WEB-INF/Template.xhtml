@@ -6,29 +6,44 @@
 
     <h:head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <h:outputStylesheet name="./css/default.css"/>
-        <h:outputStylesheet name="./css/cssLayout.css"/>
-        <title><ui:insert name="title">serviapp</ui:insert></title>
+        <link rel="stylesheet" href="#{request.contextPath}/resources/css/default.css"/>
+        <link rel="stylesheet" href="#{request.contextPath}/resources/css/cssLayout.css"/>
+         <link rel="stylesheet" href="#{request.contextPath}/css/estilos.css"/>
+         <link rel="stylesheet" href="#{request.contextPath}/css/menu.js"/>
+         <link rel="stylesheet" type="text/css" href="#{request.contextPath}/css/fonts.css"/>
+            <link rel="stylesheet" href="/fonts"/>
+            <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <title>ServiApp</title>
     </h:head>
-    <h:body>
-        <ui:insert name="header">header</ui:insert>
-        <ui:insert name="body">cuerpo de la pagina</ui:insert>
 
-        <footer class="Footer" id="contatactenos">
+    <body>
+
+        <div id="header" class="header">
+                 <header>
+            <div class="menu_bar">
+                <a href="#" class="bt-menu"><span class="icon-menu"></span>Menú</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#"><span class="icon-home"></span>SeriviApp</a></li>
+                    <li><a output="pages/Registrarse/Registrarse.xhtml"><span class="icon-profile"></span>Registro</a></li>
+                    <li><a output="pages/iniciar sesion/inicio sesion.xhtml"><span1 class="icon-users"></span1>Usuario</a></li>
+                </ul>
+            </nav>
+        </header>
+        </div>
+
+        <div id="content" class="center_content">
+            <ui:insert name="content">Content</ui:insert>
+        </div>
+
+        <div id="footer" class="footer">
+            <ui:insert name="footer">
+                <footer class="Footer" id="contatactenos">
             <div class="Footer-block">
                 <div class="menu-footer">
                     <h2 class="Footer-title">INFORMACION</h2>
                     <ul class="compañia">
-                        <li><a>Quienes somos</a></li>
-                        <li><a>Visiòn</a></li>
-                        <li><a>Misiòn</a></li>
-                    </ul>
-                </div>          
-            </div>
-            <div class="Footer-block">
-                <div class="menu-footer">
-                    <h2 class="Footer-title">INFORMACION</h2>
-                    <ul class="compañia1">
                         <li><a>Quienes somos</a></li>
                         <li><a>Visiòn</a></li>
                         <li><a>Misiòn</a></li>
@@ -46,6 +61,11 @@
                 </div>
             </div>
         </footer>
-    </h:body>
+            </ui:insert>
+            
+             <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="css/menu.js"></script> 
+        </div>
+    </body>
 
 </html>

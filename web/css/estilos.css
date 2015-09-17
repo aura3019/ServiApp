@@ -11,9 +11,6 @@
     float: left;
     margin-top: -20px;
 }
-.amazon.header_amazon_view .brand a, .amazon.header_amazon_view .brand img {
-
-}
 .amazon.header_amazon_view .partials_search_view .search-form {
     float: left;
     width: 500px;
@@ -176,7 +173,7 @@ header nav ul li .children li{
 }
 header nav ul li .children li a {
     display: block;
-
+    
 }
 header nav ul li .children li a span{
     float: right;
@@ -185,41 +182,90 @@ header nav ul li .children li a span{
 header nav ul li a:hover{
     background: #037E8C;
 }
-section {
-    padding: 20px;
-}
+
 .Footer{
     background-image: url(../css/images/Captura.PNG);
     line-height: 24px;
     display: block;
-    margin-top: 33.5em;
+    margin-top: 7em;
 }
 .Footer-block{
     display: inline-block;
-    margin-right: 1.5%;
+    margin-right: 20%;
     width: 23%;
-    margin: 50px;
+
     list-style: none;
 }
-@media screen and (max-width: 800px){
+.logo2{
+    display: none;
+}
+.posting2{
+    float: left;
+    border-radius: 3px;
+    background: dodgerblue;
+    background-image: linear-gradient(to bottom,rgba(255,255,255,0.25),rgba(255,255,255,0));
+    border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    color: #fff;
+    padding: 15px 30px;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    font-size: 1.428571428571429rem;
+    font-weight: bold;
+    line-height: 1;
+    text-decoration: none;  
+    display: none;
+    
+}
+.menu-footer{
+    margin-left: 65%;
+}
+.Footer-block2{
+    display: none;
+}
+/*TABLET*/
+@media screen and (max-width: 800px){                
     header nav{
         width: 80%;
         height: 100%;
         margin: 0;
         position: fixed;
         left: -100%;
-    }
+        z-index: 10000;
+       }
     header nav ul li{
         display: block;
         float: none;
         border-bottom: 1px solid rgba(255,255,255, .3);
-    }
-
+       }
+    header nav ul li a{
+        color: white;
+       }
+    #carrusel{
+	display: block;
+       }
+    .bx-pager{
+	display: block;
+       }
+    .bx-prev{
+	display: block;
+       }
+    .bx-next{
+	display: block;
+       }
+    .bx-viewport{
+        display: block;
+       }
+    #main-nav{
+        display: none;
+       }
     .menu_bar{
         display: block;
         width: 100%;
         background: #ccc;
-    }
+       }
 
     .menu_bar .bt-menu {
         display: block;
@@ -232,16 +278,611 @@ section {
         -webkit-box-sizing:border-box;
         -moz-box-sizing:border-box;
         -box-sizing:border-box;
-    }
+       }
+    .menu_bar span{
+        float: right;
+        font-size: 40px;
+       }
+    .logo{
+        display: none;
+       }
+       .logo2{
+           display: block;
+           margin-left: 15%;
+       }   
+    .Footer{
+        font-size: 1em;
+       }
+    //section{
+      //  display: none;
+    //}  
+
+    .posting{
+        width: 145px;
+        height: 50px;
+        position: absolute;
+       }
+    .posting-title{
+        display: none;
+       }
+    .search-form{
+        padding: 1px 1px;
+        margin-top: 10em;
+       }
+    
+    .search-cell{
+        margin-top: 10em;
+       }
+    .amazon header_amazon_view{
+        margin-top: 10em;
+        position: relative;
+       }
+    #main-section{
+        margin-top: 5em;
+       }
+    .amazon.header_amazon_view{
+        width: 55em;
+        height: 0em;
+       }
+}
+@media screen and (max-width: 799px){                
+    header nav{
+        width: 80%;
+        height: 100%;
+        margin: 0;
+        position: fixed;
+        left: -100%;
+        z-index: 10000;
+       }
+    header nav ul li{
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255,255,255, .3);
+       }
+    header nav ul li a{
+        color: white;
+       }
+    #carrusel{
+	display: block;
+       }
+    .bx-pager{
+	display: block;
+       }
+    .bx-prev{
+	display: block;
+       }
+    .bx-next{
+	display: block;
+       }
+    .bx-viewport{
+        display: block;
+       }
+       .bx-wrapper{
+           right: 10px;
+       }
+    #main-nav{
+        display: none;
+       }
+    .menu_bar{
+        display: block;
+        width: 100%;
+        background: #ccc;
+       }
+
+    .menu_bar .bt-menu {
+        display: block;
+        padding: 20px;
+        background: dodgerblue;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -box-sizing:border-box;
+       }
+    .menu_bar span{
+        float: right;
+        font-size: 40px;
+       }
+    .logo{
+        display: none;
+       }
+    .Footer{
+        font-size: 1em;
+       }
+    //section{
+      //  display: none;
+    //}  
+
+    .posting{
+       display: none;
+       }
+    .posting-title{
+        display: none;
+       }
+    .search-form{
+        padding: 1px 1px;
+        margin-top: 10em;
+       
+       }
+       .amazon.header_amazon_view .partials_search_view .search-form{
+           width:  450px;
+           margin-left: 10em;
+       }
+    
+    .search-cell{
+        margin-top: 10em;
+       }
+    .amazon header_amazon_view{
+        margin-top: 10em;
+        position: relative;
+       }
+    #main-section{
+        margin-top: 7em;
+       }
+    .amazon.header_amazon_view{
+        width: 55em;
+        height: 0em;
+       }
+         .posting2{
+         display: block;
+         margin-left: 12em;
+     }
+     .logo2{
+         display: block;
+         margin-left: 10em;
+     }
+}
+/*CELULAR*/
+@media screen and (max-width: 631px){
+    header nav{
+        width: 80%;
+        height: 100%;
+        margin: 0;
+        position: fixed;
+        left: -100%;
+       }
+    header nav ul li{
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255,255,255, .3);
+       }
+    #carrusel{
+	display: none;
+       }
+    .bx-pager{
+	display: none;
+       }
+    .bx-prev{
+	display: none;
+       }
+    .bx-next{
+	display: none;
+       }
+    .bx-viewport{
+	display: none;
+       }
+    #main-nav{
+        display: none;
+       }
+
+    .menu_bar{
+        display: block;
+        width: 100%;
+        background: #ccc;
+      }
+
+    .menu_bar .bt-menu {
+        display: block;
+        padding: 20px;
+        background: dodgerblue;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -box-sizing:border-box;
+      }
 
     .menu_bar span{
         float: right;
         font-size: 40px;
-    }
+      }
     .logo{
         display: none;
-    }
-    section{
+      }
+    .Footer{
+        font-size: 1em;
+      }
+    //section{
+      //  display: none;
+    //}  
+
+    .posting{
         display: none;
-    }  
+      }
+    .posting-title{
+        display: none;
+      }
+    .search-form{
+        padding: 1px 1px;
+        margin-top: 30em;
+      }
+    .serch-term{
+        padding: 5px 10px;
+      }
+    
+    .search-cell{
+        display:none;
+      }
+    .amazon header_amazon_view{
+        display: none
+      }
+    #main-section{
+        margin-top: 5em;
+        font-size: 15px;
+      }
+    .amazon.header_amazon_view .partials_search_view .search-form{
+        width: 80%;
+        margin-left: 5em;
+      }
+    .amazon.header_amazon_view{
+        width: 30em;
+        height: 0em;
+     }
+     .posting2{
+         display: block;
+         margin-left: 35%;
+     }
+     .logo2{
+         display: block;
+         margin-left: 22%;
+     }
+      .Footer-block{
+        display: block;
+        font-size: 1em;
+        margin-right: 20%;
+    }
+    
+}
+@media screen and (max-width: 478px){
+    header nav{
+        width: 80%;
+        height: 100%;
+        margin: 0;
+        position: fixed;
+        left: -100%;
+       }
+    header nav ul li{
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255,255,255, .3);
+       }
+    #carrusel{
+	display: none;
+       }
+    .bx-pager{
+	display: none;
+       }
+    .bx-prev{
+	display: none;
+       }
+    .bx-next{
+	display: none;
+       }
+    .bx-viewport{
+	display: none;
+       }
+    #main-nav{
+        display: none;
+       }
+
+    .menu_bar{
+        display: block;
+        width: 100%;
+        background: #ccc;
+      }
+
+    .menu_bar .bt-menu {
+        display: block;
+        padding: 20px;
+        background: dodgerblue;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -box-sizing:border-box;
+      }
+
+    .menu_bar span{
+        float: right;
+        font-size: 40px;
+      }
+    .logo{
+        display: none;
+      }
+    .Footer{
+        font-size: 1em;
+      }
+    //section{
+      //  display: none;
+    //}  
+
+    .posting{
+        display: none;
+      }
+    .posting-title{
+        display: none;
+      }
+    .search-form{
+        padding: 1px 1px;
+        margin-top: 30em;
+      }
+    .serch-term{
+        padding: 5px 10px;
+      }
+    
+    .search-cell{
+        display:none;
+      }
+    .amazon header_amazon_view{
+        display: none
+      }
+    #main-section{
+        margin-top: 5em;
+        font-size: 15px;
+      }
+    .amazon.header_amazon_view .partials_search_view .search-form{
+        width: 83%;
+        margin-left: 6%;
+      }
+    .amazon.header_amazon_view{
+        width: 30em;
+        height: 0em;
+     }
+
+     .posting2{
+         display: block;
+         margin-left: 35%;
+     }
+     .logo2{
+         display: blminimaock;
+         margin-left: 22%;
+     }
+      .Footer-block{
+        display: block;
+        font-size: 1em;
+    }
+}
+@media screen and (max-width: 430px){
+    header nav{
+        width: 80%;
+        height: 100%;
+        margin: 0;
+        position: fixed;
+        left: -100%;
+       }
+    header nav ul li{
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255,255,255, .3);
+       }
+    #carrusel{
+	display: none;
+       }
+    .bx-pager{
+	display: none;
+       }
+    .bx-prev{
+	display: none;
+       }
+    .bx-next{
+	display: none;
+       }
+    .bx-viewport{
+	display: none;
+       }
+    #main-nav{
+        display: none;
+       }
+
+    .menu_bar{
+        display: block;
+        width: 100%;
+        background: #ccc;
+      }
+
+    .menu_bar .bt-menu {
+        display: block;
+        padding: 20px;
+        background: dodgerblue;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -box-sizing:border-box;
+      }
+
+    .menu_bar span{
+        float: right;
+        font-size: 40px;
+      }
+    .logo{
+        display: none;
+      }
+    .Footer{
+        font-size: 1em;
+      }
+    //section{
+      //  display: none;
+    //}  
+    .Footer-block{
+        display: block;
+        font-size: 1em;
+    }
+
+    .posting{
+        display: none;
+      }
+    .posting-title{
+        display: none;
+      }
+    .search-form{
+        padding: 1px 1px;
+        margin-top: 30em;
+      }
+    .serch-term{
+        padding: 5px 10px;
+      }
+    
+    .search-cell{
+        display:none;
+      }
+    .amazon header_amazon_view{
+        display: none
+      }
+    #main-section{
+        margin-top: 7%;
+        font-size: 20px;
+        text-align: center;
+        margin-left: 10%;
+      }
+    .amazon.header_amazon_view .partials_search_view .search-form{
+        width: 70%;
+        margin-left: 0;
+      }
+    .amazon.header_amazon_view{
+        width: 30em;
+        height: 0em;
+     }
+
+     .posting2{
+         display: block;
+         margin-left: 15%;
+     }
+     .logo2{
+         display: block;
+         margin-left: 22%;
+     }
+     
+}
+@media screen and (max-width: 360px){
+    header nav{
+        width: 80%;
+        height: 100%;
+        margin: 0;
+        position: fixed;
+        left: -100%;
+       }
+    header nav ul li{
+        display: block;
+        float: none;
+        border-bottom: 1px solid rgba(255,255,255, .3);
+       }
+    #carrusel{
+	display: none;
+       }
+    .bx-pager{
+	display: none;
+       }
+    .bx-prev{
+	display: none;
+       }
+    .bx-next{
+	display: none;
+       }
+    .bx-viewport{
+	display: none;
+       }
+    #main-nav{
+        display: none;
+       }
+
+    .menu_bar{
+        display: block;
+        width: 100%;
+        background: #ccc;
+      }
+
+    .menu_bar .bt-menu {
+        display: block;
+        padding: 20px;
+        background: dodgerblue;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 25px;
+        -webkit-box-sizing:border-box;
+        -moz-box-sizing:border-box;
+        -box-sizing:border-box;
+      }
+
+    .menu_bar span{
+        float: right;
+        font-size: 40px;
+      }
+    .logo{
+        display: none;
+      }
+    .Footer{
+        font-size: 1em;
+      }
+    //section{
+      //  display: none;
+    //}  
+    .Footer-block{
+        display: block;
+        font-size: 1em;
+    }
+
+    .posting{
+        display: none;
+      }
+    .posting-title{
+        display: none;
+      }
+    .search-form{
+        padding: 1px 1px;
+        margin-top: 30em;
+      }
+    .serch-term{
+        padding: 5px 10px;
+      }
+    
+    .search-cell{
+        display:none;
+      }
+    .amazon header_amazon_view{
+        display: none
+      }
+    #main-section{
+        margin-top: 7%;
+        font-size: 20px;
+        text-align: center;
+        margin-left: 10%;
+      }
+    .amazon.header_amazon_view .partials_search_view .search-form{
+        width: 63%;
+        margin-left: 0;
+      }
+    .amazon.header_amazon_view{
+        width: 30em;
+        height: 0em;
+     }
+
+     .posting2{
+         display: block;
+         margin-left: 15%;
+     }
+     .logo2{
+         display: block;
+         margin-left: 22%;
+     }
+     
 }

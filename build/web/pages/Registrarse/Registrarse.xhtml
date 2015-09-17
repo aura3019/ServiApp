@@ -3,108 +3,118 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
       xmlns:jsf="http://xmlns.jcp.org/jsf"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
 
+    <body>
 
+        <ui:composition template="/WEB-INF/Template.xhtml">
 
-        <ui:composition template="./../../WEB-INF/Template.xhtml">
-            <ui:define name="title">Registrarse</ui:define>
-            <ui:define name="header">
-                serviapp
-            </ui:define>
-
-            <ui:define name="body">
-                <form jsf:id="createCoffeappForm">
-            REGITRARSE
-            <table border="10px">
-                <tr>
-                    <td>Nombre</td>
-                    <td>
-            <input type="text"
-                   jsf:id="nombre"
-                   required="true"/>
-            </td>
-            </tr>
-                <tr>
-                    <td>Apellido</td>
-                    <td>
-            <input type="text"
-                   jsf:id="apellido"
-                   required="true"/>
-            </td>
-            </tr>
-                <tr>
-                    <td>Telefono</td>
-                    <td>
-            <input type="number"
-                   jsf:id="telefono"
-                   required="true"/>
-            </td>
-            </tr>
-                <tr>
-                    <td>Direccion</td>
-                    <td>
-                        <input type="text"
-                               jsf:id="direccion"
-                               required="true"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Password</td>
-                    <td>
-                        <input type="text"
-                               jsf:id="password"
-                               required="true"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Roles</td>
-                    <td>
-                        <select jsf:id="Roles"
-                                size="1"
-                                required="true">
-                            <f:selectItem itemLabel=""/>
-                            <f:selectItem itemLabel="Usuario" itemValue="U"/>
-                            <f:selectItem itemLabel="Administrador" itemValue="A"/>
+            <ui:define name="content">
+                <p:messages></p:messages>
+                <form jsf:id="createRegistrarseForm">
+                    <div class="serviapp">
+                        <input class="servicios"
+                               type="text"
+                               placeholder="Nombres"
+                               required="true"
+                               jsf:value="#{usuarioController.selectedUsuario.nombres}"/>
+                        <input class="servicios"
+                               type="text"
+                               placeholder="Apellidos"
+                               required="true"
+                               jsf:value="#{usuarioController.selectedUsuario.apellidos}"/>
+                        <input class="servicios"
+                               type="tel"
+                               placeholder="Telefono"
+                               required="true"
+                               jsf:value="#{usuarioController.selectedUsuario.telefono}"/>
+                        <input class="servicios"
+                             type="text"
+                               placeholder="Dirección"
+                               required="true"
+                               jsf:value="#{usuarioController.selectedUsuario.direccion}"/>
+                        <select jsf:value="#{usuarioController.ciudad}"
+                                required="true"
+                                size="1">
+                            <f:selectItem itemLabel="Ciudad"/>
+                            <f:selectItems value="#{ciudadController.itemsCiudad}"
+                                           var="ciudad"
+                                           itemLabel="#{ciudad.nombreCiudad}"
+                                           itemValue="#{ciudad.idCiudad},#{ciudad.departamento.idDepartamento}"/>
                         </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Ciudad</td>
-                    <td>
-                <input type="text"
-                       jsf:id="ciudad"
-                       required="true"/>
-                    </td>
-                </tr>
-                 <tr>
-                    <td>Tipo de documento</td>
-                    <td>
-                        <select jsf:id="Tipo_de_documento"
-                                size="1"
-                                required="true">
-                            <f:selectItem itemLabel=""/>
-                            <f:selectItem itemLabel="Cedula Ciudadania" itemValue="C.C."/>
-                            <f:selectItem itemLabel="Persona juridica" itemValue="NIT"/>
+                        <select class="servicios"
+                            jsf:value="#{ciudadController.idDepartamento}"
+                                requiered="true" 
+                                size="1">
+                            <f:selectItem itemLabel="Departamento"/>
+                            <f:selectItems value="#{departamentoController.itemsDepartamento}"
+                                           var="departamento"
+                                           itemValue="#{departamento.idDepartamento}"
+                                           itemLabel="#{departamento.nombreDepartamento}"/>
                         </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                    <button type="ENVIAR"
-                            jsf:action="List"
-                            >
-                        ENVIAR
+                        <input class="servicios" 
+                               type="email"
+                               placeholder="correo Electronico"
+                               required="true"
+                               jsf:value="#{usuarioController.selectedUsuario.email}"/>
+
+                        <input class="servicios" 
+                            type="date"
+                               placeholder="fecha_nac"
+                               requiered="true"
+                               jsf:value="#{usuarioController.selectedUsuario.fechaNac}">
+                            <f:convertDateTime pattern="yyyy-MM-dd"/>
+                        </input>
+                        <select class="servicios" 
+                            jsf:value="#{usuarioController.selectedUsuario.sexo}"
+                                required="true"
+                                size="1">
+                            <f:selectItem itemLabel="Sexo"/>
+                            <f:selectItem itemLabel="Femenino" itemValue="F"/>
+                            <f:selectItem itemLabel="Masculino" itemValue="M"/>
+                        </select>
+                        <input class="servicios" 
+                               type="password"
+                               placeholder="Contraseña"
+                               required="true"
+                               jsf:value="#{usuarioController.selectedUsuario.password}"/>
+                        <select jsf:value="#{usuarioController.idRol}"
+                                required="true"
+                                size="1">
+                            <f:selectItem itemLabel="Rol"/>
+                            <f:selectItems value="#{rolController.itemsRol}"
+                                           var="rol"
+                                           itemLabel="#{rol.nombreRol}"
+                                           itemValue="#{rol.idRol}"/>
+                        </select>
+                        <input class="servicios"
+                               type="documento"
+                               placeholder="Numero"
+                               required="true"
+                               jsf:value="#{usuarioController.idUsuario}"/>
+                        <select jsf:value="#{usuarioController.idTipoDocumento}"
+                                required="true"
+                                size="1">
+                            <f:selectItem itemLabel="Documento"/>
+                            <f:selectItems value="#{tipoDocumentoController.itemsTipoDocumento}"
+                                           var="tipoDocumento"
+                                           itemLabel="#{tipoDocumento.nombreDocumento}"
+                                           itemValue="#{tipoDocumento.idTipoDocumento}"/>
+                    </select>
+                        <button class="button"  
+                        type="submit" 
+                             jsf:actionListener="#{usuarioController.create}">
+                        Guardar
+                    </button>    
+                    <button type="button">
+                        Cancelar
                     </button>
-                    </td>
-                </tr>
-            </table>       
-        </form>
-            </ui:define>
+                </div>
+            </form>
+        </ui:define>
 
-            <ui:define name="bottom">
-                bottom
-            </ui:define>
+    </ui:composition>
 
-        </ui:composition>
+</body>
 </html>

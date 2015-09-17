@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:jsf="http://xmlns.jcp.org/jsf">
     <head>
         <meta charset="UTF-8">
-            <title>Menú</title>
+            <title>ServiApp</title>
             <link rel="stylesheet" href="css/estilos.css"/>
             <link rel="stylesheet" href="css/menu.js"/>
             <link rel="stylesheet" type="text/css" href="css/fonts.css"/>
@@ -14,21 +15,25 @@
     <body>
         <header>
             <div class="menu_bar">
-                <a href="#" class="bt-menu"><span class="icon-menu"></span>Menú</a>
+                <a href="#" class="bt-menu"><span class="icon-menu"></span>ServiApp</a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#"><span class="icon-home3"></span>SeriviApp</a></li>
-                    <li><a href="pages/Registrarse/Registrarse.xhtml"><span class="icon-profile"></span>Registro</a></li>
-                    <li><a href="pages/iniciar sesion/inicio sesion.xhtml"><span1 class="icon-user"></span1>Usuario</a></li>
+                    <li><a output="#"><span class="icon-home3"></span>ServiApp</a></li>
+                    <li><a jsf:outcome="/pages/Registrarse/Registrarse.xhtml"><span class="icon-profile"></span>Registro</a></li>
+                    <li><a jsf:outcome="/pages/Inicio de sesion/Inicio sesion.xhtml"><span1 class="icon-user"></span1>Usuario</a></li>
                 </ul>
             </nav>
         </header>
-        <div class="amazon header_amazon_view" data-view="header/amazon" data-subid="">
+        <figure class="logo2">
+            <img class="logo2" src="css/images/ServiAppa.png" alt="serviapp Logo"/>
+        </figure>
+        <section class="amazon header_amazon_view" data-view="header/amazon" data-subid="">
             <div class="brand">
                 <a href="" data-increment-metric="dgd.home.home" data-increment-include="currentRoute:categories#list">
-                    <img class="logo" src="css/images/serviapp.PNG" alt="serviapp Logo"/>
+                    <img class="logo" src="css/images/ServiAppa.png" alt="serviapp Logo"/>
                 </a>
+                
             </div>
             <div id="search" class="partials_search_view" data-view="partials/search_amazon" data-subid="">
                 <form class="search-form" action="" method="post" role="search"> 
@@ -47,44 +52,49 @@
             </div>
             <a href="" rel="nofollow" class="posting" role="button" data-qa="post-button" data-increment-metric="dgd.home.posting" 
                data-increment-include="currentRoute:categories#list">Publica tu servicio</a>
-             <h6 class="posting-title hide">Clasificados gratis<span>donde los compradores encuentran a los vendedores</span></h6>
-        </div>
+             <h6 class="posting-title hide"><span>donde los compradores encuentran a los vendedores</span></h6>
+        </section>
         
        <nav id="main-nav" >
 	<h2>Servicios destacados</h2>
-		<div><img src="css/images/01.jpg" heigth="200" width="200"/><h4>Construcción</h4></div>
-		<div><img src="css/images/02.jpg" heigth="200" width="200"/><h4>Carpinteria</h4></div>
-		<div><img src="css/images/03.jpg" heigth="200" width="200"/><h4>Cerrajeros</h4></div>
-		<div><img src="css/images/04.jpg" heigth="200" width="200"/><h4>Abogados</h4></div>
-	    <div><img src="css/images/05.jpg" heigth="200" width="200"/><h4>Mantenimiento computadoras</h4>
-  <button type="submit">Más servicios</button>
-            </div>
+		<figure>
+                    <img src="css/images/01.jpg" heigth="200" width="200"/><h4>Construcción</h4>
+		    <img src="css/images/02.jpg" heigth="200" width="200"/><h4>Carpinteria</h4>
+		    <img src="css/images/03.jpg" heigth="200" width="200"/><h4>Cerrajeros</h4>
+		    <img src="css/images/04.jpg" heigth="200" width="200"/><h4>Abogados</h4>
+	            <img src="css/images/05.jpg" heigth="200" width="200"/><h4>Mantenimiento computadoras</h4>
+                 </figure>
+        <button type="submit">Más servicios</button>
+            
        </nav>
+          <a href="" rel="nofollow" class="posting2" role="button" data-qa="post-button" data-increment-metric="dgd.home.posting" 
+               data-increment-include="currentRoute:categories#list">Publica tu servicio</a>
        <section id="main-section">
+         
 	<h2>Bienvenidos a ServiApp</h2>
 
-<article>
+
 	<h3>¿Que hacemos?</h3>
-	<p class="texto1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis praesentium, optio dolorum, corporis, magnam error nam officia assumenda animi debitis recusandae expedita ipsam incidunt laudantium non. Sunt fuga dolorum a.</p>
-</article>
-<article>
+	<p class="texto1">Bueno lo que nosotros hacemos es que las diferentes personas con distintos oficios o trabajos puedan publicar su servicios y encontrar de manera más sencilla un trabajo</p>
+
+
 	<h3>¿Por que lo hacemos?</h3>
-	<p class="texto2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis praesentium, optio dolorum, corporis, magnam error nam officia assumenda animi debitis recusandae expedita ipsam incidunt laudantium non. Sunt fuga dolorum a.</p>
-</article>
-<article>
+	<p class="texto2">Lo hacemos por que nos dimos cuenta que la sociedad necesitaba esto, ya que sirve tanto para los que ofrencen los servicios como para los que lo necesitan, esperamos seguir avanzando con este proyecto nos.</p>
+
+
 	<h3>¡Animate y registrate!</h3>
-	<p class="Animate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis praesentium, optio dolorum, corporis, magnam error nam officia assumenda animi debitis recusandae expedita ipsam incidunt laudantium non. Sunt fuga dolorum a.</p>
-</article>    
+	<p class="Animate">No lo dudes, registrate publicate tu servicio o encuentra el que necesitas de manera rápida y sencilla, también califica que te pareció el servicio y dejanos un comentario, ServiApp la mejor opción!.</p>
+  
 </section>
-        <div id="carrusel">
-		<div><img src="css/images/01.jpg" heigth="500" width="500"/></div>
-		<div><img src="css/images/02.jpg" heigth="500" width="500"/></div>
-		<div><img src="css/images/03.jpg" heigth="500" width="500"/></div>
-		<div><img src="css/images/04.jpg" heigth="500" width="500"/></div>
-	    <div><img src="css/images/05.jpg" heigth="500" width="500"/></div>
-	</div>
+        <figure id="carrusel">
+		<img src="css/images/01.jpg" heigth="500" width="500"/>
+		<img src="css/images/02.jpg" heigth="500" width="500"/>
+		<img src="css/images/03.jpg" heigth="500" width="500"/>
+                <img src="css/images/04.jpg" heigth="500" width="500"/>
+	    <img src="css/images/05.jpg" heigth="500" width="500"/>
+	</figure>
         <footer class="Footer" id="contatactenos">
-            <div class="Footer-block">
+            <section class="Footer-block">
                 <div class="menu-footer">
                     <h2 class="Footer-title">INFORMACION</h2>
                     <ul class="compañia">
@@ -93,8 +103,8 @@
                         <li><a>Misiòn</a></li>
                     </ul>
                 </div>          
-            </div>
-            <div class="Footer-block">
+            </section>
+            <div class="Footer-block2">
                 <div class="menu-footer">
                     <h2 class="Footer-title">INFORMACION</h2>
                     <ul class="compañia1">
@@ -108,7 +118,7 @@
                 <div class="menu-footer">
                     <h2 class="Footer-title">CONTÀCTENOS</h2>
                     <ul class="compañia">
-                        <li><a>Nuestra Empresa</a></li>
+                        <li><a>ServiApp</a></li>
                         <li><a>Car. 9A #11-22 B/el prado</a></li>
                         <li><a href="https://mail.google.com/mail/#inbox">darodriguez364@misena.edu.co</a></li>
                     </ul>
@@ -116,16 +126,7 @@
             </div>
         </footer>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
-        <script src="css/menu.js"></script>
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        <script src="css/menu.js"></script> 
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="css/js/carrusel.js"></script>
 	<!-- jQuery library (served from Google) -->
